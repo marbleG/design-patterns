@@ -2,8 +2,12 @@ package com.mabrle.designpatterns.singlton;
 
 /**
  * 描述： 枚举式单例的写法，防止反序列化
+ * @author marble
  */
 public enum Singleton {
+    /**
+     * 单例
+     */
     INSTANCE;
 
     public void whatever() {

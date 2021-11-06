@@ -3,6 +3,7 @@ package com.mabrle.designpatterns.singlton;
 
 /**
  * 懒汉式单例模式
+ * @author marble
  */
 public class LazySingleton {
     private static LazySingleton singleton;

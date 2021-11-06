@@ -2,6 +2,7 @@ package com.mabrle.designpatterns.singlton;
 
 /**
  * 静态内部类
+ * @author marble
  */
 public class InnerClassSingleton {
 
