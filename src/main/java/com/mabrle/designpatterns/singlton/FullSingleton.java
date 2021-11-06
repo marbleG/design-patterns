@@ -2,13 +2,13 @@ package com.mabrle.designpatterns.singlton;
 
 
 /**
- * 饱汉式单例模式
+ * 懒汉式单例模式
  */
-public class FullSingleton {
-    private static FullSingleton singleton;
-    private static volatile FullSingleton syncSingleton;
+public class LazySingleton {
+    private static LazySingleton singleton;
+    private static volatile LazySingleton syncSingleton;
 
-    private FullSingleton() {
+    private LazySingleton() {
     }
 
     /**
@@ -16,9 +16,9 @@ public class FullSingleton {
      *
      * @return
      */
-    public static FullSingleton getSingleton() {
+    public static LazySingleton getSingleton() {
         if (singleton == null) {
-            singleton = new FullSingleton();
+            singleton = new LazySingleton();
         }
         return singleton;
     }
@@ -28,9 +28,9 @@ public class FullSingleton {
      *
      * @return
      */
-    public static synchronized FullSingleton getSyncSingleton() {
+    public static synchronized LazySingleton getSyncSingleton() {
         if (singleton == null) {
-            singleton = new FullSingleton();
+            singleton = new LazySingleton();
         }
         return singleton;
     }
@@ -38,12 +38,12 @@ public class FullSingleton {
     /**
      * 双重检查 线程安全，效率高
      */
-    public static FullSingleton getSyncSingletonDoubleCheck() {
+    public static LazySingleton getSyncSingletonDoubleCheck() {
 
         if (syncSingleton == null) {
-            synchronized (FullSingleton.class) {
+            synchronized (LazySingleton.class) {
                 if (syncSingleton == null) {
-                    syncSingleton = new FullSingleton();
+                    syncSingleton = new LazySingleton();
                 }
             }
         }
