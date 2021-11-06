@@ -1,7 +1,7 @@
 package com.mabrle.designpatterns.singlton;
 
 /**
- * 描述： 枚举式单例的写法
+ * 描述： 枚举式单例的写法，防止反序列化
  */
 public enum Singleton {
     INSTANCE;

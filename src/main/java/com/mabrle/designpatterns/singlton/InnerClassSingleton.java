@@ -1,5 +1,8 @@
 package com.mabrle.designpatterns.singlton;
 
+/**
+ * 静态内部类
+ */
 public class InnerClassSingleton {
 
     private InnerClassSingleton() {
